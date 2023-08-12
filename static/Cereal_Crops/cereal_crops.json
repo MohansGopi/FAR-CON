@@ -1,0 +1,17 @@
+{
+    "Name": {
+        "0": "Rice",
+        "1": "Wheat",
+        "2": "Rice"
+    },
+    "Price": {
+        "0": "25/kg",
+        "1": "10/kg",
+        "2": "17"
+    },
+    "Photo": {
+        "0": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41RLYdZ6L4L.jpg",
+        "1": "https://newsonair.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-10-at-9.02.27-PM.jpeg",
+        "2": "static/images/ri.jpg"
+    }
+}

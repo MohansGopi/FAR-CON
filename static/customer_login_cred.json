@@ -1,0 +1,27 @@
+{
+    "Name": {
+        "0": "Mohan S",
+        "1": "Kolo K",
+        "2": "Ragunath R"
+    },
+    "Phone": {
+        "0": 9655377971,
+        "1": 9876543210,
+        "2": 9876543210
+    },
+    "Who Are You": {
+        "0": "Customer",
+        "1": "Customer",
+        "2": "Customer"
+    },
+    "Password": {
+        "0": "mohan_123",
+        "1": "kololoko",
+        "2": "kolo"
+    },
+    "Repeat Password": {
+        "0": "mohan_123",
+        "1": "kololoko",
+        "2": "kolo"
+    }
+}

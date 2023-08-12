@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload_Your_Produce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="shortcut icon" href="static\images\favicon.ico">
+</head>
+<body style="background-color:#DDFFBB;">
+<center>
+    <h2 style="font:30px ProximaNovaA-Regular; padding:5%;color:#7AA874;">
+        Upload Produce
+    </h2>
+    </center>
+
+<form   style="width:50%;position:absolute; top:20%; left:26%;" action="/update_seller_produce" method="post"  enctype="multipart/form-data">
+    <div class="form-group" style="padding:3%;">
+    <label for="exampleInputEmail1" style="font-size:20px; color:white;"><b>Produce Name</b></label>
+    <input  type="text" class="form-control" id="exampleInputEmail1" name="prod_name" aria-describedby="emailHelp" placeholder="Tomato" required>
+  </div>
+    <div class="form-group" style="padding:3%;">
+    <label for="exampleInputEmail1" style="font-size:20px; color:white;"><b>Produce Price</b></label>
+    <input  type="number" class="form-control" id="exampleInputEmail1" name="prod_price" aria-describedby="emailHelp" placeholder="20" required>
+        <small id="emailHelp" style="font-size:80%;" class="form-text text-muted">Enter Price Per Kg.</small>
+    </div>
+    <div style="padding:3%;">
+    <label for="exampleInput" style="font-size:20px; color:white;">Category</label>
+            <select class="form-control" id="exampleInput" name="cate"  required>
+              <option value="">_ _Select_ _</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Cereal_crops">Cereal_crops</option>
+            </select></div>
+
+    <div class="form-group" style="padding:3%;">
+        <label for="exampleFormControlFile1" style="font-size:20px; color:white;" >Upload Photo Of Your Produce</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="image/*" name="images" required>
+            </div>
+
+    <center>
+        <button type="submit" class="btn btn-success">Upload</button>
+    </center>
+
+</form>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

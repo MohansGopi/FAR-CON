@@ -1,0 +1,32 @@
+{
+    "Name": {
+        "0": "Calliflower",
+        "1": "tomato",
+        "2": "potato",
+        "3": "Brindjal",
+        "4": "tomato",
+        "5": "potato",
+        "6": "Brindjal",
+        "7": "Calliflower"
+    },
+    "Price": {
+        "0": 10,
+        "1": 19,
+        "2": 20,
+        "3": 13,
+        "4": 5,
+        "5": 10,
+        "6": 20,
+        "7": 8
+    },
+    "Photo": {
+        "0": "static/images/images.jpg",
+        "1": "static/images/images_(1).jpg",
+        "2": "static/images/potato.jpg",
+        "3": "static/images/istockphoto-1194259953-612x612.jpg",
+        "4": "static/images/istockphoto-860528672-612x612-removebg-preview.png",
+        "5": "static/images/potato.jpg",
+        "6": "static/images/images (3).jpg",
+        "7": "static/images/images.jpg"
+    }
+}

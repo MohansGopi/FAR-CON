@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAR-CON</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="shortcut icon" href="static\images\favicon.ico">
+</head>
+<body style="margin:0;background-color:#F6F1F1;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7AA874;">
+      <a class="navbar-brand" href={{url_for("main")}}>
+          <div>
+        <img src="static/logo.png" alt="CON-FAR" style="width:90px;">
+          <h5>FAR-CON<small>.in</small></h5>
+
+              </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="width:90%; padding:5px;" >
+                <form action="/Search" method="post">
+                <div class="input-group mb-3" >
+  <input type="text" class="form-control"   placeholder="Search FAR-CON.IN" aria-label="Recipient's username" aria-describedby="button-addon2" name="query">
+  <div class="input-group-append" >
+    <button class="btn btn-outline-warning" type="submit" id="button-addon2">Search</button>
+  </div>
+</div></form>
+          </li>
+          <li class="nav-item" style="padding:5px;">
+            <a class="nav-link " href=""><h6 class="text">Select your address</h6></a>
+          </li>
+            <li class="nav-item" style="padding:5px;">
+                {% if name == 'Sign In':%}
+            <a class="nav-link " href={{url_for('login')}}><h6 class="text">{{name}}</h6></a>
+                {% else: %}
+            <a class="nav-link " href={{url_for('user_account')}}><h6 class="text">Hello, {{name}}</h6></a>
+                {%endif%}
+          </li>
+            <li class="nav-item" style="padding:5px;">
+            <a class="nav-link " href=""><h6 class="text">Orders</h6></a>
+          </li>
+            <li class="nav-item" style="padding:5px;">
+            <a class="nav-link " href={{url_for('cart')}}><h6 class="text">Cart</h6></a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel"  style="margin-left:10%;margin-right:10%;">
+  <div class="carousel-inner" style="width:100%;">
+    <div class="carousel-item active" data-interval="4000">
+      <img src="static/images/image-3.jpg" class="d-block " alt="..." style="width:100%;height:100%;">
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="static/images/rice_ad.jpg" class="d-block" alt="..." style="width:100%;height:100%;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div><br><br><br>
+
+<div class="row" style="margin-left:10%;margin-right:10%;">
+    <div class="col-sm-4" style="padding:2%;">
+        <a href={{url_for('Cereal_Crops')}} style="text-decoration:none;color:black;">
+        <div class="card">
+            <div class="card-title">
+                <h2 style="padding:2%;font-family:Arial,sans-serif;"><b>Cereal Crops</b></h2>
+            </div>
+            <img src="https://www.world-grain.com/ext/resources/2022/05/10/Cereal-grains_cr-Adobe-Stock_E.jpg?height=667&t=1652190823&width=1080" class="card-img-bottom" style="padding:5%;">
+            <div class="card-body">
+            <a href="" style="text-decoration:none;">See more</a>
+        </div>
+        </div></a>
+
+
+    </div>
+    <div class="col-sm-4" style="padding:2%;">
+        <a href={{url_for('Vegetables')}} style="text-decoration:none;color:black;">
+            <div class="card">
+            <div class="card-title">
+                <h2 style="padding:2%;font-family:Arial,sans-serif;"><b>Vegetables</b></h2>
+            </div>
+            <img src="https://media.istockphoto.com/id/1203599963/photo/food-background-with-assortment-of-fresh-organic-fruits-and-vegetables.jpg?s=612x612&w=0&k=20&c=JKjEfvVa0ZieiyDbvhbUaCRgZ0MQJcx7cf35k-vRftY=" class="card-img-bottom" style="padding:5%;">
+            <div class="card-body">
+            <a href="" style="text-decoration:none;">See more</a>
+        </div>
+        </div>
+        </a>
+
+
+    </div>
+    <div class="col-sm-4" style="padding:2%;">
+        <a href={{url_for('Fruits')}} style="text-decoration:none;color:black;">
+            <div class="card">
+            <div class="card-title">
+                <h2 style="padding:2%;font-family:Arial,sans-serif;"><b>Fruits</b></h2>
+            </div>
+            <img src="https://www.snexplores.org/wp-content/uploads/2022/10/1440_SS_fruit_feat.jpg" class="card-img-bottom" style="padding:5%;">
+            <div class="card-body">
+            <a href="" style="text-decoration:none;">See more</a>
+        </div>
+        </div>
+
+        </a>
+
+    </div>
+</div>
+
+<br><br>
+<center>
+<h3 style="font:24px ProximaNovaA-Regular;">Sunday's Plan</h3></center>
+<hr style="width:90%;">
+<br><br>
+
+
+<div class="row" style="margin-left:10%;margin-right:10%;">
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://img2.exportersindia.com/product_images/bc-full/2019/6/6311954/country-chicken-meat-1560579735-4953513.jpeg" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Country Chicken</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/a07ba83c-f94c-f431-bdd2-128c780b493c/original/kkkkkkkkkk.jpg" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Chicken Curry Cut - Small Pieces</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/d49aac35-6784-73e1-93ff-ac738c240f15/original/Chicken-Breast-Boneless-(3-4-Pieces)-Hero-Shot_(1).jpg" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Chicken Breast - Boneless</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://www.dotori.in/public/thumbs/products/Red_Snapper_0_600.jpg" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Fish Red Snapper(sankara)</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://5.imimg.com/data5/AK/NH/GLADMIN-7351739/seer-fish-steaks-sea-fish-500x500.png" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Seer / King fish (Vanjaram)</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2" style="padding:1%;">
+        <div class="card">
+            <img src="https://i0.wp.com/indofoody.com/wp-content/uploads/2020/11/wp1903760-meat-wallpapers.jpg?fit=2338%2C1553&ssl=1" class="card-img-top" style="padding:5%;">
+            <div class="card-title">
+                <h2 style="font:20px ProximaNovaA-Regular; padding:5%;">Mutton <br>(Goat meat)</h2>
+            </div>
+        </div>
+    </div>
+    <a href={{url_for('sunday_plan')}} style="text-decoration:none;">
+        See more ->
+    </a>
+</div>
+
+
+
+
+
+<br><br><br><br>
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          style="background-color: #ECEFF1; width:100%;"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4 text-white"
+             style="background-color: #21D192"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f">facebook</i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter">twitter</i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google">google</i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram">instagram</i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin">linkedin</i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github">github</i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              FAR-CON.in<br> is a web app for connect consumer directly to farmers.
+              Our motive is add profit to customer and buy great quality product
+              in low price.
+            </p>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href={{url_for('un_cons')}} class="text-dark">About Us</a>
+            </p>
+            <p>
+              <a href={{url_for('un_cons')}} class="text-dark">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href={{url_for('un_cons')}} class="text-dark">Shipping Rates</a>
+            </p>
+            <p>
+              <a href={{url_for('un_cons')}} class="text-dark">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Trichy, TN , IND</p>
+            <p><i class="fas fa-envelope mr-3"></i> mohansgopi@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 91 96553 77971</p>
+            <p><i class="fas fa-print mr-3"></i> + 91 78249 77479</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/"
+         >FAR-CON.in</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

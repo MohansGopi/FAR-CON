@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{user_name}}</title>
+    <link rel="shortcut icon" href="static\images\favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<style>
+    .hoo:hover{
+        opacity:85%;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7AA874;">
+      <a class="navbar-brand" href={{url_for("main")}}>
+          <div>
+        <img src="static/logo.png" alt="CON-FAR" style="width:90px;">
+          <h5>FAR-CON<small>.in</small></h5>
+
+              </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="width:90%; padding:5px;" >
+                <form action="/Search" method="post">
+                <div class="input-group mb-3" >
+  <input type="text" class="form-control"   placeholder="Search FAR-CON.IN" aria-label="Recipient's username" aria-describedby="button-addon2" name="query">
+  <div class="input-group-append" >
+    <button class="btn btn-outline-warning" type="submit" id="button-addon2">Search</button>
+  </div>
+</div></form>
+          </li>
+          <li class="nav-item" style="padding:5px;">
+            <a class="nav-link " href=""><h6 class="text">Select your address</h6></a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+<div class="row" style="margin-left:10%;margin-right:10%; margin-top:10%;">
+    <div class="col-sm-3" style="padding-bottom:2%;">
+        <a href={{url_for('cart')}} style="text-decoration:none;color:black;">
+         <div class="card hoo">
+             <img src="" class="card-img-top">
+             <img src="https://media.istockphoto.com/id/1287347889/vector/basket-with-bottle-and-fruits-line-icon-black-friday-concept-shop-basket-sign-on-white.jpg?s=612x612&w=0&k=20&c=5MHGztOCb4oVg0w3M-49H3tSZyPGhvnwFxdcTcqX00g=" class="card-img-top">
+             <div class="card-title">
+                <center><h2 style="font:30px ProximaNovaA-Regular; padding:5%;">Cart</h2></center>
+             </div>
+         </div></a>
+    </div>
+    <div class="col-sm-3" style="padding-bottom:2%;">
+         <div class="card hoo">
+             <img src="https://media.istockphoto.com/id/838071400/vector/archive-flat-icon.jpg?s=612x612&w=0&k=20&c=Ion9_xTdmQiRc0oWoldKFHDqMwJxHXfhMqAJnqmSXXk=" class="card-img-top">
+             <div class="card-title">
+                 <center><h2 style="font:30px ProximaNovaA-Regular; padding:5%;">Order History</h2></center>
+             </div>
+         </div>
+    </div>
+    <div class="col-sm-3" style="padding-bottom:2%;">
+        <a href={{url_for('noti_from_admin')}} style="text-decoration:none;color:black;">
+         <div class="card hoo">
+             <img src="https://media.istockphoto.com/id/1257404830/vector/email-marketing-icon-vector-graphics.jpg?s=612x612&w=0&k=20&c=0O_ldByYxp4qyQQszBIt08ErjP11Jf9ujCh-UZQS40Q=" class="card-img-top">
+             <div class="card-title">
+                 <center><h2 style="font:30px ProximaNovaA-Regular; padding:5%;">Notification</h2></center>
+             </div>
+         </div></a>
+    </div>
+    <div class="col-sm-3" style="padding-bottom:2%;">
+        <a href={{url_for('exit_web')}} style="text-decoration:none;color:black;">
+         <div class="card hoo">
+             <img src="https://media.istockphoto.com/id/695394258/vector/business-solution-or-exit-strategy.jpg?s=612x612&w=0&k=20&c=MFtv-pzbejN1Wr2dIUcuFfNVjxUp78PoDu5n-mWrzVA=" class="card-img-top">
+             <div class="card-title">
+                 <center><h2 style="font:30px ProximaNovaA-Regular; padding:5%;">Sign Out</h2></center>
+             </div>
+         </div></a>
+    </div>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "Name": {
+        "0": "Apple",
+        "1": "Rice"
+    },
+    "Price": {
+        "0": 75,
+        "1": 17
+    },
+    "Photo": {
+        "0": "static/images/Hot-climate-Apple.jpg",
+        "1": "static/images/ri.jpg"
+    },
+    "Category": {
+        "0": "Fruits",
+        "1": "Cereal_crops"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "Name": {
+        "0": "Apple",
+        "1": "Orange",
+        "2": "Apple"
+    },
+    "Price": {
+        "0": "15/kg",
+        "1": "80/kg",
+        "2": "75"
+    },
+    "Photo": {
+        "0": "https://extension.umn.edu/sites/extension.umn.edu/files/Two%20apples%20close-up_screen.jpg",
+        "1": "https://www.agrifarming.in/wp-content/uploads/2015/03/oranges-1117628_960_720.jpg",
+        "2": "static/images/Hot-climate-Apple.jpg"
+    }
+}
